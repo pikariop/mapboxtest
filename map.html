@@ -47,16 +47,26 @@
             map.fitBounds(runLayer.getBounds());
         });
 
+    var basePath = 'route/';
 
     var runLayer = omnivore.gpx('alpakke.gpx', null, customLayer);
 
     runLayer.addTo(map);
 
-    omnivore.gpx('route/bodom.gpx', null, customLayer).addTo(map);
-    omnivore.gpx('route/fhf.gpx', null, customLayer).addTo(map);
-    omnivore.gpx('route/laavulta.gpx', null, customLayer).addTo(map);
-    omnivore.gpx('route/itae.gpx', null, customLayer).addTo(map);
-
+    [
+        'bodom.gpx',
+        'fhf.gpx',
+        'laavulta.gpx',
+        'itae.gpx'
+    ].forEach(
+        function (value) {
+            omnivore.gpx(
+                basePath + value,
+                null,
+                customLayer
+            ).addTo(map);
+        }
+    );
         </script>
 
     </body>
