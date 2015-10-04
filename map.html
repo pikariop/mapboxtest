@@ -47,17 +47,16 @@
             map.fitBounds(runLayer.getBounds());
         });
 
-    var basePath = 'route/';
+    var basePath = 'uploads/';
 
-    var runLayer = omnivore.gpx('alpakke.gpx', null, customLayer);
+    var runLayer = omnivore.gpx('2.gpx', null, customLayer);
 
     runLayer.addTo(map);
 
     [
-        'bodom.gpx',
-        'fhf.gpx',
-        'laavulta.gpx',
-        'itae.gpx'
+        '1.gpx',
+        '2.gpx',
+        '3.gpx',
     ].forEach(
         function (value) {
             omnivore.gpx(
@@ -67,6 +66,7 @@
             ).addTo(map);
         }
     );
+
         </script>
 
     </body>
