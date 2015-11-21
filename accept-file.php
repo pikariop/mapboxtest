@@ -9,8 +9,8 @@ function handleUpload($file) {
     }
 
     $ok = move_uploaded_file(
-        $file['tmp_name'], 
-        'uploads/'.$file['name']
+        $file['tmp_name'],
+        'tracks/'.$file['name']
     );
 
         return "ok!" ;
